@@ -1,0 +1,23 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {},
+    "functions": [],
+    "variables": {},
+    "resources": [
+  {
+    "name":"pub1",
+    "type": "Microsoft.Network/publicIPAddresses",
+    "apiVersion": "2024-03-01",
+    "location": "eastus",
+    "sku": {
+        "name": "Basic"
+
+    },
+    "properties": {
+        "publicIPAllocationMethod": "Dynamic"       
+    }
+  }
+    ],
+    "outputs": {}
+}

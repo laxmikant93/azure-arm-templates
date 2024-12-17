@@ -1,0 +1,37 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {},
+    "functions": [],
+    "variables": {},
+    "resources": [
+  {
+    "name": "armnet",
+    "type": "Microsoft.Network/virtualNetworks",
+    "apiVersion": "2024-03-01",
+    "location": "eastus",  
+    "properties": {
+        "addressSpace": {
+            "addressPrefixes": [
+                "10.0.0.0/16"
+            ]
+        },
+        "subnets": [
+            {
+                "name": "Subnet1",
+                "properties": {
+                    "addressPrefix": "10.0.0.0/24"
+                }
+            },
+            {
+                "name": "Subnet2",
+                "properties": {
+                    "addressPrefix": "10.0.1.0/24"
+                }
+            }
+        ]
+    }
+  }
+    ],
+    "outputs": {}
+}
